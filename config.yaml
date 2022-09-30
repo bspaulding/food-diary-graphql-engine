@@ -1,5 +1,5 @@
 version: 3
-endpoint: http://localhost:8080
+endpoint: https://food-diary.motingo.com/api
 metadata_directory: metadata
 actions:
   kind: synchronous
