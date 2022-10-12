@@ -1,3 +1,4 @@
+- "!include food_diary_calories_per_day.yaml"
 - "!include food_diary_diary_entry.yaml"
 - "!include food_diary_diary_entry_recent.yaml"
 - "!include food_diary_nutrition_item.yaml"
