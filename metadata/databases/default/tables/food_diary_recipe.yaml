@@ -31,7 +31,6 @@ insert_permissions:
       set:
         user_id: x-hasura-User-Id
       columns:
-        - id
         - name
         - total_servings
 select_permissions:
@@ -50,7 +49,6 @@ update_permissions:
   - role: user
     permission:
       columns:
-        - id
         - name
         - total_servings
       filter:
