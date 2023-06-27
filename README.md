@@ -18,3 +18,12 @@ hasura console --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET
 ```
 
 Make changes in the console, and commit any changes to migrations/metadata.
+
+## Database Setup
+
+If this is a new db, you will need to migrate and apply metadata:
+
+```
+hasura migrate apply --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET
+hasura metadata apply --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET
+```
