@@ -27,3 +27,5 @@ If this is a new db, you will need to migrate and apply metadata:
 hasura migrate apply --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET
 hasura metadata apply --admin-secret $HASURA_GRAPHQL_ADMIN_SECRET
 ```
+
+If no default database exists, you will need to create the metadata in the hasura UI to point to the database specified by the env var `$PG_DATABASE_URL`.
