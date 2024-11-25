@@ -20,3 +20,14 @@ object_relationships:
         remote_table:
           name: recipe
           schema: food_diary
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - nutrition_item_id
+        - recipe_id
+        - times_logged
+      filter:
+        user_id:
+          _eq: X-Hasura-User-Id
+    comment: ""
