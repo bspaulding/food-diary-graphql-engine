@@ -23,6 +23,7 @@ where recipe_id = recipe.id) recipe_item_with_added_sugar;
 $$;
 
 -- Create helper function to calculate diary entry protein
+-- Note: UNION is safe here due to has_recipe_xor_item constraint ensuring only one ID is set
 CREATE FUNCTION food_diary.diary_entry_protein(diary_entry food_diary.diary_entry) RETURNS numeric
     LANGUAGE sql STABLE
     AS $$
@@ -36,6 +37,7 @@ where id = diary_entry.nutrition_item_id
 $$;
 
 -- Create helper function to calculate diary entry added sugar
+-- Note: UNION is safe here due to has_recipe_xor_item constraint ensuring only one ID is set
 CREATE FUNCTION food_diary.diary_entry_added_sugar(diary_entry food_diary.diary_entry) RETURNS numeric
     LANGUAGE sql STABLE
     AS $$
