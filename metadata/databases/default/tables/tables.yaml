@@ -6,3 +6,4 @@
 - "!include food_diary_recently_logged_items.yaml"
 - "!include food_diary_recipe.yaml"
 - "!include food_diary_recipe_item.yaml"
+- "!include food_diary_trends_weekly.yaml"
