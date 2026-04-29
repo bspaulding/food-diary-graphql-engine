@@ -19,6 +19,11 @@ computed_fields:
       function:
         name: diary_entry_day
         schema: food_diary
+  - name: hour_of_day
+    definition:
+      function:
+        name: diary_entry_hour_of_day
+        schema: food_diary
 insert_permissions:
   - role: user
     permission:
@@ -49,6 +54,7 @@ select_permissions:
       computed_fields:
         - calories
         - day
+        - hour_of_day
       filter:
         user_id:
           _eq: X-Hasura-User-Id
